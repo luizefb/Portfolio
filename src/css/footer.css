@@ -1,0 +1,33 @@
+footer {
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 8%;
+    background-color: #213642;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.footer-item {
+    display: flex;
+    justify-content: center;
+    gap: 0.50rem;
+    flex-direction: row;
+    align-items: center;
+  
+}
+
+.icon-email {
+    stroke: currentColor;
+    fill: currentColor;
+    height: 1.55rem;
+    width: 1.55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+    margin-left: 0rem;
+    color:#4b78f4;
+}

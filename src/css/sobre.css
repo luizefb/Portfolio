@@ -1,0 +1,31 @@
+.sobre {
+    background-color: #deeefa;
+    height: 100vh;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+    text-align:justify ;
+    box-sizing: border-box;
+    
+}
+
+.titulo-sobre {
+    color: #213642;
+    padding: 1rem;
+    font-size: 28px;
+}
+
+.texto-sobre {
+    max-width: 50rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    font-size: 18px;    
+}
