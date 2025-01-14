@@ -29,3 +29,12 @@
     word-wrap: break-word;
     font-size: 18px;    
 }
+
+@media (max-width: 340px) {
+    .sobre-container {
+        height: 140vh;
+    }
+    .sobre {
+        height: 140vh;
+    }
+}
