@@ -1,6 +1,6 @@
 .sobre {
     background-color: #deeefa;
-    height: 100vh;
+    height: 120vh;
 }
 
 .sobre-container {
@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 120vh;
     padding: 1rem;
     text-align:justify ;
     box-sizing: border-box;
