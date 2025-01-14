@@ -32,9 +32,9 @@
 
 @media (max-width: 340px) {
     .sobre-container {
-        height: 160vh;
+        height: 180vh;
     }
     .sobre {
-        height: 160vh;
+        height: 180vh;
     }
 }
