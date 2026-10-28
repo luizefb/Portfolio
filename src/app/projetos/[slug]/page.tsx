@@ -32,6 +32,7 @@ export default async function ProjectPage({ params }: Props) {
           <div className="case-kicker"><span>PROJETO {project.number} / {project.category.toUpperCase()}</span><span>{project.year}</span></div>
           <h1>{project.title}<span className="case-period">.</span></h1>
           <p className="case-lead">{project.intro}</p>
+          <a className="button button-primary production-link" href={project.productionUrl} target="_blank" rel="noopener noreferrer">Acessar projeto em produção <span aria-hidden="true">↗</span></a>
           <div className="case-hero-visual"><ProjectVisual project={project} large /></div>
         </div>
 

@@ -11,6 +11,7 @@ export type Project = {
   outcome: string;
   features: { title: string; description: string }[];
   stack: string[];
+  productionUrl: string;
   theme: "consultorio" | "fila";
 };
 
@@ -37,6 +38,7 @@ export const projects: Project[] = [
       { title: "Acesso protegido", description: "Login e sessão com expiração, além de integração privada entre Next.js e API." },
     ],
     stack: ["Next.js", "React", "TypeScript", "NestJS", "Prisma", "Zod", "SQLite", "Cloudflare D1", "Cloudflare Workers"],
+    productionUrl: "https://consultorio-psi-web.hotemaki.workers.dev/",
     theme: "consultorio",
   },
   {
@@ -61,6 +63,7 @@ export const projects: Project[] = [
       { title: "Demonstração local", description: "Fluxo explorável com dados fictícios salvos apenas no navegador." },
     ],
     stack: ["Next.js", "React", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Docker"],
+    productionUrl: "https://fila-front.hotemaki.workers.dev/",
     theme: "fila",
   },
 ];
