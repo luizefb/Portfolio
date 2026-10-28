@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -17,15 +18,21 @@ export default function HomePage() {
             <p className="hero-description reveal delay-2">Desenvolvo aplicações web de ponta a ponta, da análise de requisitos à interface e à API. Hoje trabalho com sistemas de atendimento, dados e fluxos que precisam funcionar bem na rotina das pessoas.</p>
             <div className="hero-actions reveal delay-3">
               <Link className="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></Link>
-              <a className="text-link" href="/curriculo-luiz-baganha.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
+              <a className="text-link" href="/LUIZ_BAGANHA_CURRICULO.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-          <div className="hero-art hero-art-type reveal delay-2" aria-hidden="true">
-            <div className="type-art-grid"><span>DESENVOLVER<br />É RESOLVER.</span><span>↗</span></div>
-            <div className="type-art-orbit orbit-one" />
-            <div className="type-art-orbit orbit-two" />
-            <div className="type-art-caption"><span>IDEIAS EM CÓDIGO</span><span>COM PROPÓSITO.</span></div>
-            <div className="hero-side-label">DESENVOLVIMENTO · DESIGN · PRODUTO</div>
+          <div className="hero-art hero-art-photo reveal delay-2">
+            <div className="portrait-frame">
+              <Image
+                src="/luiz-baganha.jpg"
+                alt="Luiz Eduardo Baganha"
+                fill
+                priority
+                sizes="(max-width: 800px) 85vw, 420px"
+                className="portrait-image"
+              />
+            </div>
+            <div className="portrait-caption">DESENVOLVEDOR FULL STACK · BELÉM, PA</div>
           </div>
           <a className="scroll-cue" href="#projetos">ROLE PARA EXPLORAR <span aria-hidden="true">↓</span></a>
         </section>
