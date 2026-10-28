@@ -1,24 +1,21 @@
 import type { Metadata } from "next";
+import { getLocale, t } from "@/lib/i18n";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Luiz Eduardo Baganha — Desenvolvedor Full Stack",
-    template: "%s | Luiz Eduardo Baganha",
-  },
-  description:
-    "Portfólio de Luiz Eduardo Baganha, desenvolvedor Full Stack. Projetos de gestão de consultório e de filas de atendimento.",
-  openGraph: {
-    title: "Luiz Eduardo Baganha — Desenvolvedor Full Stack",
-    description: "Projetos selecionados e trajetória em desenvolvimento de software.",
-    type: "website",
-    locale: "pt_BR",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const copy = t(locale).metadata;
+  return {
+    title: { default: copy.title, template: "%s | Luiz Eduardo Baganha" },
+    description: copy.description,
+    openGraph: { title: copy.title, description: copy.openGraphDescription, type: "website", locale: locale === "en" ? "en_US" : "pt_BR" },
+  };
+}
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale();
   return (
-    <html lang="pt-BR">
+    <html lang={locale === "en" ? "en" : "pt-BR"}>
       <body>{children}</body>
     </html>
   );

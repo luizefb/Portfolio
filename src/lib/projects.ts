@@ -68,6 +68,13 @@ export const projects: Project[] = [
   },
 ];
 
-export function getProject(slug: string) {
-  return projects.find((project) => project.slug === slug);
+import type { Locale } from "./i18n";
+import { projectEnglish } from "./projects-en";
+
+export function getProjects(locale: Locale): Project[] {
+  return locale === "en" ? projects.map((project) => ({ ...project, ...projectEnglish[project.slug] })) : projects;
+}
+
+export function getProject(slug: string, locale: Locale = "pt") {
+  return getProjects(locale).find((project) => project.slug === slug);
 }

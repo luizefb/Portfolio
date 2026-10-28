@@ -21,7 +21,9 @@ npm run build
 npm start
 ```
 
-O projeto usa o App Router do Next.js. As páginas dos projetos são geradas a partir de `src/lib/projects.ts`; ali também ficam textos e tecnologias. O currículo atualizado está em `public/`.
+O projeto usa o App Router do Next.js. O botão PT/EN no cabeçalho salva o idioma em um cookie e mantém a escolha ao navegar entre páginas. Português é o idioma padrão.
+
+Para editar os textos da interface, altere os blocos `pt` e `en` em `src/lib/i18n.ts`. Os textos dos projetos em português ficam em `src/lib/projects.ts`; as versões em inglês ficam em `src/lib/projects-en.ts`, associadas pelo `slug`. Links, tecnologias e imagens são compartilhados. O currículo atualizado está em `public/`.
 
 ## Estrutura
 
